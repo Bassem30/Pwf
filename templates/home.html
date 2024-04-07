@@ -1,0 +1,41 @@
+<html>
+
+<body>
+    <div class="login">
+        <h1>Estimating Pwf from CTU Pumping Pressure</h1>
+
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <h1>
+                <legend>Pwf Prediction</legend>
+            </h1>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CTU Depth</label>
+                <input class="form-control" type="number" name="ct_depth" placeholder="Enter CTU Depth (ft)"
+                     />
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">CTU Pumping Pressure</label>
+                <input class="form-control" type="number" name="ct_pressure" placeholder="Enter CTU Pressure (psi)"
+                    />
+            </div>
+
+            </div>
+            <div class="mb-3">
+                <label class="form-label">N2 Pumping Rate</label>
+                <input class="form-control" type="number" name="n2_rate" placeholder="Enter N2 Pumping Rate (scf/min)" />
+            </div>
+            
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict Pwf" required />
+            </div>
+        </form>
+        <h2>
+            THE prediction is {{results}}
+        </h2>
+
+        <body>
+
+</html>
